@@ -7,6 +7,11 @@ This is a Django project for managing affiliate marketing for baby products.
 - Product management
 - Affiliate tracking
 
+## Screenshots
+
+![Product List](screenshots/product_list.png)
+![Product Details](screenshots/product_details.png)
+
 ## Installation
 
 1. Clone the repository:

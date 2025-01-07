@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+    <style>
+        .product-detail {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .product-detail h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .product-detail p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .product-image img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .affiliate-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .affiliate-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <div class="product-detail">
+        <h1>{{ product.name }}</h1>
+        <p>Price: ${{ product.price }}</p>
+        
+        <div class="product-image">
+            <img src="{{ product.image }}" alt="{{ product.name }}">
+        </div>
+        <div class="product-details">
+            <p>{{ product.description }}</p>
+        </div>
+        <p>Affiliate: {{ product.affiliate_name }}</p>
+        
+    </div>
+    <p style="margin-bottom: 20px;"></p>
+{% endblock %}
+
