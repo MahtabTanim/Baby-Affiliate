@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Products</h2>
+    <ul>
+        {% if not products %}
+            <li>No products available.</li>
+        {% endif %}
+
+        <ul class="product-list">
+            {% for product in products %}
+            <li>
+                <img src="{{ product.image }}" alt="{{ product.name }}">
+                <div class="product-details">
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+                <p>Price: {{ product.price }}</p>
+                <p>Affiliate: {{ product.affiliate_name }}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+
+        
+    </ul>
+{% endblock %}
